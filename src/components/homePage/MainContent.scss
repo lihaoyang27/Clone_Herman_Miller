@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+
+
+
+  //.function{
+  //  margin: 0 auto 30px;
+  //  width: 80vw;
+  //  display: flex;
+  //  justify-content: space-between;
+  //}
+
+
+.mainContentContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 0 15px;
+  width: 80vw;
+  transition: all 0.2s ease;
+
+
+  .productItem {
+    width: 340px;
+    height: 424px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 72px;
+    margin-right: 20px;
+    padding: 0 16px;
+
+    .imgContainer {
+      width: 100%;
+      position: relative;
+      img {
+        width: 100%;
+        transition: all 0.5s ease;
+      }
+      img .imgA{
+        position: absolute;
+        top: 0;
+        z-index: 1;
+      }
+      .imgA:hover{opacity: 0}
+      .imgB{z-index: -99;position: absolute;top:0}
+    }
+
+    span {
+      display: block;
+      text-align: left;
+      margin-top: 10px;
+    }
+
+    .productName {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .moreColor {
+      width: 300px;
+      height: 33px;
+      margin-top: 10px;
+      display: flex;
+
+      img {
+        width: 28px;
+        height: 28px;
+        margin-right: 4px
+      }
+      .active img:hover{
+        border: 2px solid;
+      }
+    }
+  }
+  .productItemBig {
+    width: 400px;
+    height: 424px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 72px;
+    margin-right: 20px;
+    padding: 0 16px;
+
+    .imgContainer {
+      width: 100%;
+      position: relative;
+      img {
+        width: 100%;
+        transition: all 0.5s ease;
+      }
+      img .imgA{
+        position: absolute;
+        top: 0;
+        z-index: -1;
+      }
+      .imgA:hover{opacity: 0}
+      .imgB{z-index: -99;position: absolute;top:0}
+    }
+
+    span {
+      display: block;
+      text-align: left;
+      margin-top: 10px;
+    }
+
+    .productName {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .moreColor {
+      width: 300px;
+      height: 33px;
+      margin-top: 10px;
+      display: flex;
+
+      img {
+        width: 28px;
+        height: 28px;
+        margin-right: 4px
+      }
+      .active img:hover{
+        border: 2px solid;
+      }
+    }
+  }
+}
+
+
+.cardContent{
+  padding-left: 0;
+}
+

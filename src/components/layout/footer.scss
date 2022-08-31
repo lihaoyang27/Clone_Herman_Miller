@@ -1,0 +1,80 @@
+
+.footerTitle{font-size: 1.3rem;font-weight: bold;color: black;}
+.footer{
+  width: 100%;
+  background-color: rgb(235,235,235);
+}
+.footerContainer{
+  width:80vw;height: 500px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 70px 0 40px;
+  .footerLeft{
+    width: 750px;height: 385px;
+    margin-left: 50px;
+    display: flex;
+    .footerLogo{
+      margin-right: 50px;
+    }
+    .customer{
+      margin-right: 50px;
+      height: inherit;
+      display: flex;flex-direction: column;justify-content: space-between;
+      text-align: left;
+      font-size: 1.2rem;font-weight: bold;color:rgb(173,173,173);
+    }
+    .resourcesLocations{
+      margin-right: 50px;
+      height: inherit;
+      display: flex;flex-direction: column;
+      text-align: left;
+      font-size: 1.2rem;font-weight: bold;color:rgb(173,173,173);
+      .resources{
+        height: 56px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .locations{
+        margin-top: 40px;
+        height: 86px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+    .about{
+      height: inherit;
+      display: flex;flex-direction: column;justify-content: space-between;
+      text-align: left;
+      font-size: 1.2rem;font-weight: bold;color:rgb(173,173,173);
+    }
+  }
+  .footerRight{
+    display: flex;
+    flex-direction: column;
+    height:500px;width: 400px;
+    text-align: left;
+  }
+}
+
+.ui.action.input{
+  width: 200px;
+  margin:20px 0;
+}
+.copyright{
+  display: flex;
+  background-color: rgb(235,235,235);
+  color: rgb(173,173,173);
+  padding-bottom: 40px;
+  .canada{
+    padding-left:100px;
+    display: flex;
+    img{width: 30px}
+  }
+  .inc{
+    margin: auto;
+  }
+}

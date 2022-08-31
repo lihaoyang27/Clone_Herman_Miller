@@ -1,0 +1,37 @@
+
+
+.loginRegisterContainer{
+  width: 80vw;
+  margin: 4rem auto;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.login .loginTitle, .register .registerTitle{
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.formItem{
+  margin-top: 20px;
+  width: 30vw;
+}
+
+.formItem .formItemTitle{
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.formBtn{
+  border:none;
+  background-color: orangered;
+  width: 150px;
+  height: 40px;
+  color: white;
+  margin: 2rem 0;
+  border-radius: 4px;
+}
+
+

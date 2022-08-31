@@ -1,0 +1,23 @@
+
+.cartHeadingContainer{
+  width: 80vw;
+  margin: auto;
+
+}
+
+.cartHeadingContainer .nav{
+  text-align: left;
+  margin-top: 10px
+}
+
+.cartTitleAndCustomerService{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cartTitleAndCustomerService .title{
+  font-size: 3rem;
+  font-weight: bold;
+}
