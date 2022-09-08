@@ -47,15 +47,7 @@ const ProductInfo = ({getProduct}) => {
 
 
 
-// //get the total price,and set product selected
-//     useEffect(()=>{
-//         let totalPrice = 0
-//         totalPrice = parseInt(productInfo.price) + parseInt(Object.values(productSelected).reduce((sum,item) => sum + parseInt(item.price), 0))
-//         setProductPrice(parseInt(totalPrice))
-//
-//     },[])
-
-    //transfer the total price and the product selected to the parent component
+    //pass the total price and the product selected to the parent component
     useEffect(() => {
 
         let totalPrice = 0

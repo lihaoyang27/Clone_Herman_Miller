@@ -63,6 +63,9 @@ img {
     .productName {
       font-size: 1.1rem;
       font-weight: bold;
+      width: 100%;
+      text-align: left;
+      margin-top: .5rem;
     }
 
     .moreColor {
@@ -106,16 +109,12 @@ img {
       .imgB{z-index: -99;position: absolute;top:0}
     }
 
-    span {
-      display: block;
-      text-align: left;
-      margin-top: 10px;
-    }
+    //span {
+    //  display: block;
+    //  text-align: left;
+    //  margin-top: 10px;
+    //}
 
-    .productName {
-      font-size: 1.1rem;
-      font-weight: bold;
-    }
 
     .moreColor {
       width: 300px;

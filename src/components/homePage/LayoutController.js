@@ -18,7 +18,7 @@ const LayoutController = () => {
     const allProduct = useSelector(state => state.ProductReducer.product)
     const dispatch = useDispatch()
     const [price, setPrice] = useState('');
-    const [open, setOpen] = useState(false);
+    const [priceOpen, setPriceOpen] = useState(false);
     const [sort, setSort] = useState('')
     const [sortOpen, setSortOpen] = useState(false);
 
@@ -29,13 +29,10 @@ const LayoutController = () => {
         filterProduct(event.target.value)(dispatch)
     };
 
-    const handleClose = () => {
-        setOpen(false);
+    const handlePriceOpenClose = () => {
+        setPriceOpen(!priceOpen);
     };
 
-    const handleOpen = () => {
-        setOpen(true);
-    };
 
     //Feature sort
     const handleSort = (event) => {
@@ -43,12 +40,8 @@ const LayoutController = () => {
         sortProduct(event.target.value)(dispatch)
     };
 
-    const handleSortClose = () => {
-        setSortOpen(false);
-    };
-
-    const handleSortOpen = () => {
-        setSortOpen(true);
+    const handleSortOpenClose = () => {
+        setSortOpen(!sortOpen);
     };
 
 
@@ -56,29 +49,14 @@ const LayoutController = () => {
     return (
         <div className="function">
             <div className="controllerLeft">
-                {/*    <div className="filterPrice">*/}
-                {/*        <input type="checkbox" id="checkForPrice"/>*/}
-                {/*        <label htmlFor="checkForPrice">*/}
-                {/*            <span>Price</span>*/}
-                {/*            <i className="fas fa-sort-down"></i>*/}
-                {/*        </label>*/}
-                {/*    </div>*/}
-                {/*    <div className="filterMaterial">*/}
-                {/*        <input type="checkbox" id="checkForMaterial"/>*/}
-                {/*        <label htmlFor="checkForMaterial">*/}
-                {/*            <span>Material</span>*/}
-                {/*            <i className="fas fa-sort-down"></i>*/}
-                {/*        </label>*/}
-                {/*    </div>*/}
-
                 <FormControl sx={{m: 1, minWidth: 120}}>
-                    <InputLabel id="demo-controlled-open-select-label">Price</InputLabel>
+                    <InputLabel id="price-select-label">Price</InputLabel>
                     <Select
-                        labelId="demo-controlled-open-select-label"
-                        id="demo-controlled-open-select"
-                        open={open}
-                        onClose={handleClose}
-                        onOpen={handleOpen}
+                        labelId="price-select-label"
+                        id="price-select"
+                        open={priceOpen}
+                        onClose={handlePriceOpenClose}
+                        onOpen={handlePriceOpenClose}
                         value={price}
                         label="Price"
                         onChange={handleChange}
@@ -95,15 +73,15 @@ const LayoutController = () => {
 
                 <div className="sort">
                     <FormControl sx={{m: 1, minWidth: 160}}>
-                        <InputLabel id="demo-controlled-open-select-label">Featured Products</InputLabel>
+                        <InputLabel id="sort-select-label">Sort</InputLabel>
                         <Select
-                            labelId="demo-controlled-open-select-label"
-                            id="demo-controlled-open-select"
+                            labelId="sort-select-label"
+                            id="sort-select"
                             open={sortOpen}
-                            onClose={handleSortClose}
-                            onOpen={handleSortOpen}
+                            onClose={handleSortOpenClose}
+                            onOpen={handleSortOpenClose}
                             value={sort}
-                            label="Featured Products"
+                            label="Sort"
                             onChange={handleSort}
                         >
 
@@ -122,112 +100,6 @@ const LayoutController = () => {
 
 
             <MiniController/>
-
-            {/*<div className="miniController">*/}
-            {/*    <label htmlFor="filterCheckBox">*/}
-            {/*    <div className="miniControllerContent">*/}
-            {/*        <div>Filter By</div><div><i className="fas fa-sort-up"></i></div>*/}
-            {/*    </div>*/}
-            {/*    </label>*/}
-            {/*    <input type="checkbox" id="filterCheckBox"/>*/}
-
-            {/*    <div className="miniFilterPrice">*/}
-            {/*        <div className="miniPriceContainer">*/}
-            {/*            <input type="checkbox" id="priceCheckBox"/>*/}
-            {/*            <label htmlFor="priceCheckBox">*/}
-            {/*            <div className="miniPriceContent">*/}
-            {/*                <div>Price</div><div><i className="fas fa-sort-up"></i></div>*/}
-            {/*            </div>*/}
-            {/*            </label>*/}
-            {/*            <ul>*/}
-            {/*                <li onClick={handleMiniPriceChange("")}>none</li>*/}
-            {/*                <li onClick={handleMiniPriceChange("500")}>$500 - $1000</li>*/}
-            {/*                <li onClick={handleMiniPriceChange("1000")}>$1000 - $1500</li>*/}
-            {/*                <li onClick={handleMiniPriceChange("1500")}>$1500 - $2000</li>*/}
-            {/*                <li onClick={handleMiniPriceChange("2000")}>Above $2000</li>*/}
-            {/*            </ul>*/}
-            {/*        </div>*/}
-            {/*        <div className="miniFilterSort">*/}
-            {/*            <div className="miniSortContent">*/}
-            {/*                <div>Filter By</div><div><i className="fas fa-sort-up"></i></div>*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-
-            {/*</div>*/}
-
-
-            {/*<div className="miniController">*/}
-
-            {/*    <Accordion>*/}
-            {/*        <AccordionSummary*/}
-            {/*            expandIcon={<ExpandMore/>}*/}
-            {/*            aria-controls="panel1a-content"*/}
-            {/*            id="panel1a-header"*/}
-            {/*        >*/}
-            {/*            <Typography>Filter & Sort</Typography>*/}
-            {/*        </AccordionSummary>*/}
-
-            {/*        <Accordion>*/}
-            {/*            <AccordionSummary*/}
-            {/*                expandIcon={<ExpandMore/>}*/}
-            {/*                aria-controls="panel1a-content"*/}
-            {/*                id="panel1a-header"*/}
-            {/*            >*/}
-            {/*                <Typography>Price Filter</Typography>*/}
-            {/*            </AccordionSummary>*/}
-
-            {/*            <AccordionDetails>*/}
-            {/*                /!*<FormControl component="fieldset">*!/*/}
-            {/*                /!*    <FormLabel component="legend">Gender</FormLabel>*!/*/}
-            {/*                /!*    <RadioGroup*!/*/}
-            {/*                /!*        aria-label="gender"*!/*/}
-            {/*                /!*        defaultValue="female"*!/*/}
-            {/*                /!*        name="radio-buttons-group"*!/*/}
-            {/*                /!*    >*!/*/}
-            {/*                /!*        <FormControlLabel value="female" control={<Radio />} label="Female" />*!/*/}
-            {/*                /!*        <FormControlLabel value="male" control={<Radio />} label="Male" />*!/*/}
-            {/*                /!*        <FormControlLabel value="other" control={<Radio />} label="Other" />*!/*/}
-            {/*                /!*    </RadioGroup>*!/*/}
-            {/*                /!*</FormControl>*!/*/}
-
-            {/*                <MenuItem value="">*/}
-            {/*                    <em>None</em>*/}
-            {/*                </MenuItem>*/}
-            {/*            </AccordionDetails>*/}
-            {/*            <AccordionDetails>*/}
-            {/*                <MenuItem value={'500'}>$500 - $1000</MenuItem>*/}
-            {/*            </AccordionDetails>*/}
-            {/*            <AccordionDetails>*/}
-            {/*                <MenuItem value={'1000'}>$1000 - $1500</MenuItem>*/}
-            {/*            </AccordionDetails>*/}
-            {/*            <AccordionDetails>*/}
-            {/*                <MenuItem value={'1500'}>$1500 - $2000</MenuItem>*/}
-            {/*            </AccordionDetails>*/}
-            {/*            <AccordionDetails>*/}
-            {/*                <MenuItem value={'2000'}>Above $2000</MenuItem>*/}
-
-            {/*            </AccordionDetails>*/}
-
-            {/*        </Accordion>*/}
-            {/*        <Accordion>*/}
-            {/*            <AccordionSummary*/}
-            {/*                expandIcon={<ExpandMore/>}*/}
-            {/*                aria-controls="panel2a-content"*/}
-            {/*                id="panel2a-header"*/}
-            {/*            >*/}
-            {/*                <Typography>Accordion 2</Typography>*/}
-            {/*            </AccordionSummary>*/}
-            {/*            <AccordionDetails>*/}
-            {/*                <Typography>*/}
-            {/*                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse*/}
-            {/*                    malesuada lacus ex, sit amet blandit leo lobortis eget.*/}
-            {/*                </Typography>*/}
-            {/*            </AccordionDetails>*/}
-            {/*        </Accordion>*/}
-
-            {/*    </Accordion>*/}
-            {/*</div>*/}
         </div>
     )
 }

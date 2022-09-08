@@ -28,8 +28,10 @@ const ProductView = () => {
     const [optionAndPrice, setOptionAndPrice] = useState(null)
     let getProduct = (product,price) => {
         setOptionAndPrice({...product,price:price})
-
     }
+    useEffect(()=>{
+        console.log(optionAndPrice)
+    },[optionAndPrice])
     return(
         <>
             {
@@ -39,10 +41,10 @@ const ProductView = () => {
                         { loading ? <Loading/>
                             :
                             <>
-            <ProductPageHeading path="Office Chairs" title={productInfo?.name}/>
-            <MainProductPage productInfo={productInfo} getProduct={getProduct}/>
+                                <ProductPageHeading path="Office Chairs" title={productInfo?.name}/>
+                                <MainProductPage productInfo={productInfo} getProduct={getProduct}/>
                                 <Footer/>
-            <AddToCart optionAndPrice={optionAndPrice} productInfo={productInfo}/>
+                                <AddToCart optionAndPrice={optionAndPrice} productInfo={productInfo}/>
                             </>
                         }
                     </>

@@ -35,8 +35,8 @@ const MainProductPage = ({productInfo,getProduct}) => {
 
     return (
         <div className='mainProductContainer'>
-            {showPictureBrowser ? <BigPictureBrowser close={closePictureBrowser} media={media} current={currentImage}
-                                                      change={changePictureInBrowser}/> : undefined}
+            {showPictureBrowser && <BigPictureBrowser close={closePictureBrowser} media={media} current={currentImage}
+                                                      changePictureInBrowser={changePictureInBrowser}/>}
             <div className='productInfoAndImage'>
                 <ul className='smallImage'>
                     {fiveMedia?.map((value, index) => {

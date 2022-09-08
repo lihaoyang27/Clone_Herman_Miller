@@ -6,12 +6,12 @@ import CartView from "./view/cart";
 import LoginRegisterView from "./view/LoginAndRegister";
 
 function App() {
-    let year = 2022
-    let badThings = ["bug","worry"]
-
-    if(year === 2022)
-    { let badThingsIn2022 = badThings.map(badThing => badThing = null)
-        console.log('Bad things',badThingsIn2022)}
+    // let year = 2022
+    // let badThings = ["bug","worry"]
+    //
+    // if(year === 2022)
+    // { let badThingsIn2022 = badThings.map(badThing => badThing = null)
+    //     console.log('Bad things',badThingsIn2022)}
 
     return (
         <div className="App">

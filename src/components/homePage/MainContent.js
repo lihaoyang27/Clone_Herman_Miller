@@ -24,9 +24,6 @@ const MainContent = () => {
 
     return (
         <>
-            {/*<div className="mainContentHead">*/}
-            {/*    <div className="bigTitle">Office Chairs</div>*/}
-            {/*</div>*/}
             <PageHeading path="Office" title="Office Chairs"/>
             <LayoutController/>
             <div className="mainContentContainer">
